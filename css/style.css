@@ -1,112 +1,359 @@
+/* Définition des paramètres par défaut pour l'ensemble du contenu */
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:sans-serif;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: #191919;
 }
-
-
+/* définition du style pour header*/
 .header{
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px 5%;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-    background: transparent;
 }
 
-.header a.home{
+/*Style appliqué aux éléments <a> dd la barre de navigation*/
+.navbar a{
     text-decoration: none;
-    border-radius: 4px;
-    padding: 5px 15px 5px 15px;
-    font-size: 25px;
-    font-weight: 600;
-    color: #000;
-    transition : .3s;
-    background: #fff;
-}
-
-.header a.home:hover{
-    
-    color: rgb(104, 252, 193);
-    background: transparent;
-}
-
-.nav a{
     font-size: 18px;
-    text-decoration: none;
-    margin-left: 35px;
+    font-weight: 400;
     color: rgb(255, 255, 255);
-    font-weight: 600;
+    margin-left: 50px;
     transition: .3s;
+
 }
 
-.nav a:hover{
-    color: rgb(104, 252, 193);}
+/* transition lors du survol des élement de la barre*/
+.navbar a:hover{
+    color: #FF6E31;
+}
 
-.about{
+/* style appliqué à Home de la barre Header */
+.acc{
+    text-decoration: none;
+    color: #fff ;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    border: solid 2px #FF6E31;
+    border-radius: 5px;
+
+}
+
+/*Définition des paramètres pour la section Accueil*/
+.Home{
     height: 100vh;
-    background: rgb(3, 3, 39);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
 }
 
-.about-cont{
-    max-width: 600px;
-    text-align: right;
-    padding: 10px 10px;
-    border-color: #fff;
-    position:absolute;
-    right: 60px;
+.Home-cont{
+    max-width: 800px;
+    margin-right: 40px;
+    text-align: left;
+    color: #fff
 }
 
-.about-cont h1{
-    font-size: 35px;
+.Home-cont h1{
+    font-size: 50px;
+    font-weight: 700px;
     line-height: 1.2;
+    color: #fff;
 }
 
-.about-cont h3{
-    font-size: 25px;
+.Home-cont h3{
+    font-size: 45px;
     line-height: 1.2;
-    color: rgb(104, 252, 193);}
+    color: #FF6E31 ;
+    font-family: josefin-sans;
 
-.about-cont p{
+}
+
+.Home-cont p{
     font-size: 16px;
     line-height: 1.5;
     margin-top: 20px;
+    text-align: right;
+    padding-left: 20px;
 }
 
-.F{
-    background: #000;
-    color: beige;
-    text-align: center;
+/*Paramètre par défaut pour la section A propos*/
+.About{
+    height: 100vh;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+/*style appliqué au 1er bloc à propos*/
+.ab{
+    width: 400px;
     justify-content: center;
-    padding : 10px;
-
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 56px;
+    
 }
 
-.F a{
-    color: #fff;
-    font-size: 20px;
-    margin-left: 10px;
-    transition: .3s;
+/*Style appliqué au second bloc contenant ma description*/
+.About-cont{
+    max-width: 550px;
+    margin-right: 40px;
+    text-align: left;
+    color: bisque;
+    line-height: 1.4;
+    padding: 20px;
+    border: solid 2px #FF6E31;
+    border-radius: 10px;
+    
 }
 
-.F a:hover{
-    color: rgb(104, 252, 193);
+/*Paramètre par défaut pour la section travail*/
+.work{
+    position: relative;
+    height: 100vh;
+    display:flexbox;
+    justify-content:space-around;
 }
 
-.BG{
-    position: absolute;
+/*style appliqué au premier bloc "travail"*/
+.wk{
+    position: relative;
+    top: 0;
+    width: 80%;
+    height: 10%;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    font-size: 56px;
+    border-radius: 5px;
+    
+}
+
+/* disposition des élements dans le second bloc présentant les différents services */
+.work-cont{
+    display:inline-flex;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+}
+
+/*styles appliqués au different blocs contenu dans la second bloc de la section trvail*/
+.work-cont div{
+    width: 250px;
+    height: 400px;
+    border: solid 1px #FF6E31;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+/*styles des paragraphes pour les sous-blocs du bloc 2 */
+.work-cont p{
+margin-top: 30px;
+padding: 10px;
+font-size: 14px;
+color: bisque;
+line-height: 1.3;
+}
+
+/*styles des élements strongs contenus dans les sous-blocs du bloc 2*/
+.work-cont strong{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    }
+
+/*redimensionnement images développement site web  */
+.sw{
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+/*redimensionnement images développement application web  */
+.aw{
+    padding: 10px;
+    width: 230px;
+    height: 150px;
+}
+
+/*redimensionnement images intégrations de services  */
+.fc{
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+/*redimensionnement images maitenance et MAJ  */
+.mt{
+    padding: 10px;
+    width: 180px;
+    height: 150px;
+}
+
+/*Paramètre par défaut pour la section CV composé de 2 blocs et un lien de télechargement de CV*/
+.resume{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*style premier bloc "Curriculum vitae"*/
+.cv{
+    width: 400px;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    font-size: 50px;
+    justify-content: start;
+    border-radius: 5px;
+}
+
+/*style second bloc avec image et lien*/
+.resume-cont{
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    max-height: 600px;
+    margin-right: 40px;
+    justify-content: center;
+    text-align: justify;
+    color: bisque;
+    border-radius: 10px;
+}
+
+/*style pour le lien */
+.resume-cont a{
+    text-decoration: none;
+    border: solid 2px  #FF6E31;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/*rediemensionnement image CV*/
+.rs{
+    padding: 20px;
+    width: 60%;
+    height: 60%;
+}
+
+/*Paramètre par défaut section Contact composé de 2 blocs dont un formulaire*/
+.contact{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/*paramètres premier bloc "Contactez nous*/
+.ct{
+    width: 400px;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    font-size: 50px;
+    justify-content: start;
+    border-radius: 5px;
+}
+
+/*style pour le bloc contenant le formulaire*/
+.contact-cont{
+    display:grid;
+    max-width: 500px;
+    height: 400px;
+    margin-right: 40px;
+    color: bisque;
+    line-height: 1.4;
+    border: solid 2px #FF6E31;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 1em;
+}
+
+/*styles pour l'élémément <form>*/
+.contact-cont form{
+    margin-top: 30px;
+    width: 60%;
+    gap: 20px;
+    display: grid;
+}
+
+/*style des cellules de remplissage pour le formulaire*/
+.formu input{
+    color: #fff;
+    width: 100%;
+    outline: none;
+    border: solid 1px #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+
+}
+
+/*style pour le bouton d'envoie du formulaire*/
+.button{
+    width: 20%;
+    outline: none;
+    border: none;
+    background-color: #FF6E31;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+/*Paramètres par défaut du Footer*/
+.F{
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    background-color: bisque;
+
+}
+
+/*style du bloc contenant les liste d'informations*/
+.list {
+    list-style: none;
+    border-radius: 10px;
+    width: 800px;
+}
+
+/*style appliqué aux listes*/
+.list li {
+    display: inline-block;
+    margin-left: 20px;
+    align-items: center;
+    font-size: 10px;
+    list-style: none;
+    color: bisque;
+    text-decoration: none;
+    padding: 15px;
+}
+
+/*style appliqué l'élément <a> compris dans chaque élements de liste */
+.list a{
+    text-decoration: none;
+    color: bisque;
+}
+
+/*style appliqué aux icones des listes*/
+.list i{
+    font-size: 10px;
+    color: #FF6E31;
+    background-color: transparent;
+    margin-top: 10px;
+    padding: 10px;
+    
 }
